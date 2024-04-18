@@ -13,7 +13,7 @@ import java.util.HashSet;
  */
 public class Blender {
         private double capacity;
-        private HashSet<Ingredients>ingredients=new HashSet<>();// use hash set to avoid rpetitions 
+        private HashSet<Ingredients>ingredients;// use hash set to avoid rpetitions 
 
     public Blender(double capacity) {
         this.capacity = capacity;
