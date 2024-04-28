@@ -104,6 +104,7 @@ public class CocktailShop {
 
                 case 3:
                     cocktail = blender.blend();
+                    System.out.println("Cocktail blending");
                     break;
 
                 case 4:
@@ -122,11 +123,14 @@ public class CocktailShop {
                         } catch (BlenderIsEmptyException ex) {
                             System.out.println(ex.getMessage());
                         }
+                        finally{
+                            System.out.println("Cocktail Pouring");
+                        }
                     }
                     break;
 
                 case 6: {
-                    System.out.println(cup.getCalories());
+                    System.out.println( "Calories Per Cup: " +cup.getCalories());
                     break;
                 }
                 case 7: {
