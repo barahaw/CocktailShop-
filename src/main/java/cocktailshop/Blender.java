@@ -13,6 +13,7 @@ import java.util.ArrayList;
  */
 public class Blender {
 
+
     private double capacity;
     private ArrayList<Ingredients> ingredients;
     private double volume;
@@ -27,6 +28,7 @@ public class Blender {
         this.capacity = capacity;
         this.ingredients = new ArrayList<>();
     }
+       
 
     public Blender() {
     }
