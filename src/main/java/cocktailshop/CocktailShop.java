@@ -138,7 +138,7 @@ public class CocktailShop {
 
                 }
                 default:
-                    System.out.println("Invalid option. Please enter a number between 1 and 6.");
+                    System.out.println("Invalid option. Please enter a number between 1 and 7.");
             }
         }
 
