@@ -10,17 +10,19 @@ import java.awt.Color;
  *
  * @author barah
  */
-public class Fruits extends Ingredients{
-     double vloume ;
-     Color color ;
+public class Fruits extends Ingredients {
 
-    public Fruits(String name, int calories, double volume , Color color) {
+    double vloume;
+    Color color;
+
+    public Fruits(String name, int calories, double volume, Color color) {
         super(name, calories);
-        this.vloume=volume;
-        this.color=color;
+        this.vloume = volume;
+        this.color = color;
     }
 
-    public double getVloume() {
+    @Override
+    public double getVolume() {
         return vloume;
     }
 
@@ -35,10 +37,10 @@ public class Fruits extends Ingredients{
     public void setColor(Color color) {
         this.color = color;
     }
-     @Override
-     public String getInfo(){
-    return  "Vloume: "  + this.vloume  + "\n" + "color: " + this.color + super.getInfo();
-}
-   
-  
+
+    @Override
+    public String getInfo() {
+        return "Vloume: " + this.vloume + "\n" + "color: " + this.color + super.getInfo();
+    }
+
 }

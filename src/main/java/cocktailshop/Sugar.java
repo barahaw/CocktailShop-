@@ -8,16 +8,27 @@ package cocktailshop;
  *
  * @author barah
  */
-public class Sugar extends Ingredients{
-    
-    public Sugar(String name, int calories) {
+public class Sugar extends Ingredients {
+
+    private double volume;
+
+    public Sugar(String name, int calories, double volume) {
         super(name, calories);
+        this.volume = volume;
+    }
+
+    @Override
+    public double getVolume() {
+        return volume;
+    }
+
+    public void setVolume(double volume) {
+        this.volume = volume;
     }
 
     @Override
     public String getInfo() {
-        return super.getInfo(); 
+        return "Volume: " + this.volume + "\n" + super.getInfo();
     }
-    
-    
+
 }

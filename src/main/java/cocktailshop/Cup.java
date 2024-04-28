@@ -9,13 +9,20 @@ package cocktailshop;
  * @author barah
  */
 public class Cup {
-    private double capacity; 
-    private Cocktail contentCocktail;
 
-    public Cup(double capacity, Cocktail conteCocktail) {
-        this.capacity = capacity;
-        this.contentCocktail = conteCocktail;
+    private double capacity;
+    private Cocktail contentCocktail;
+    private int calories;
+
+    public Cup() {
     }
+
+    
+    public Cup(double capacity) {
+        this.capacity = capacity;
+    }
+
+
 
     public double getCapacity() {
         return capacity;
@@ -25,19 +32,24 @@ public class Cup {
         this.capacity = capacity;
     }
 
-    public Cocktail getConteCocktail() {
+    public double getCalories() {
+        return calories;
+    }
+
+    public void setCalories(int calories) {
+        this.calories = calories;
+    }
+
+    public Cocktail getContentCocktail() {
         return contentCocktail;
     }
 
-    public void setConteCocktail(Cocktail contentCocktail) {
+    public void setContentCocktail(Cocktail contentCocktail) {
         this.contentCocktail = contentCocktail;
     }
-    public void pourCocktail(Cocktail cocktail){
-        
+
+
+    public String getInfo() {
+        return "Cup Capacity: " + this.capacity + "Calories per cup" + this.calories;
     }
-    
-    public int getContentCalories(){
-        return 0;
-    }
-    
 }

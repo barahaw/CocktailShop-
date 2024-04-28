@@ -8,9 +8,10 @@ package cocktailshop;
  *
  * @author barah
  */
-public class Ingredients {
-    private String name ;
-    private int calories ;
+public abstract class Ingredients {
+
+    private String name;
+    private int calories;
 
     public Ingredients(String name, int calories) {
         this.name = name;
@@ -29,10 +30,13 @@ public class Ingredients {
         return name;
     }
 
+    public abstract double getVolume();
+
     public int getCalories() {
         return calories;
     }
-    public String getInfo(){
-        return "name: " + this.name + "\n" + "calories: " + this.calories;  
+
+    public String getInfo() {
+        return "name: " + this.name + "\n" + "calories: " + this.calories;
     }
-   }
+}
