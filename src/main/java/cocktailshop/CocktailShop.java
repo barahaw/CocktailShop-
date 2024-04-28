@@ -120,7 +120,7 @@ public class CocktailShop {
                             blender.pourCocktail(cup);
 
                         } catch (BlenderIsEmptyException ex) {
-                            Logger.getLogger(CocktailShop.class.getName()).log(Level.SEVERE, null, ex);
+                            System.out.println(ex.getMessage());
                         }
                     }
                     break;
