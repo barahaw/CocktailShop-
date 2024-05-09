@@ -15,6 +15,7 @@ import java.util.logging.Logger;
  */
 public class CocktailShop {
 
+    @SuppressWarnings("empty-statement")
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Blender blender = new Blender(500);
