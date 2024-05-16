@@ -6,7 +6,7 @@ package cocktailshop;
 
 /**
  *
- * @author M-tech
+ * @author barah
  */
 public class BlenderIsEmptyException extends Exception {
 

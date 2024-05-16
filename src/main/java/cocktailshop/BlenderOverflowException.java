@@ -6,7 +6,7 @@ package cocktailshop;
 
 /**
  *
- * @author M-tech
+ * @author barah
  */
 public class BlenderOverflowException  extends Exception {
 
