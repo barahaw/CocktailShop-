@@ -50,6 +50,6 @@ public class Cup {
 
 
     public String getInfo() {
-        return "Cup Capacity: " + this.capacity + "Calories per cup" + this.calories;
+        return "Cup Capacity: " + this.capacity + "ml" + "\n" + "Calories per cup" + this.getCalories()   ;
     }
 }

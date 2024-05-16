@@ -18,8 +18,10 @@ public class CocktailShop {
     @SuppressWarnings("empty-statement")
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Blender blender = new Blender(500);
+       MyLogger Logger =new MyLogger("tst.txt");
+        Blender blender = new Blender(500 ,Logger);
         Cocktail cocktail = new Cocktail();
+       
         Cup cup = new Cup();
         ArrayList<Ingredients> ingredients = new ArrayList<>();
         System.out.println("Ingredients List:");
@@ -75,7 +77,7 @@ public class CocktailShop {
                     System.out.println("Enter milk name, calories, and volume:");
 
                     Milk milk = new Milk(scanner.next(), scanner.nextInt(), scanner.nextInt(), Color.white);
-                    ingredients.add(milk);
+                     ingredients.add(milk);
                     System.out.println("Enter sugar name, calories, and volume:");
 
                     Sugar sugar = new Sugar(scanner.next(), scanner.nextInt(), scanner.nextInt());
@@ -85,7 +87,7 @@ public class CocktailShop {
                             try {
                             blender.addIngredients(ingredient);
                         } catch (BlenderOverflowException ex) {
-                            Logger.getLogger(CocktailShop.class.getName()).log(Level.SEVERE, null, ex);
+                            System.out.println(ex.getMessage());;
                         }
                         if (ingredient instanceof Milk)
                             try {
@@ -124,9 +126,6 @@ public class CocktailShop {
                         } catch (BlenderIsEmptyException ex) {
                             System.out.println(ex.getMessage());
                         }
-                        finally{
-                            System.out.println("Cocktail Pouring");
-                        }
                     }
                     break;
 
@@ -134,10 +133,12 @@ public class CocktailShop {
                     System.out.println( "Calories Per Cup: " +cup.getCalories());
                     break;
                 }
+                
                 case 7: {
                     System.exit(0);
 
                 }
+               
                 default:
                     System.out.println("Invalid option. Please enter a number between 1 and 7.");
             }

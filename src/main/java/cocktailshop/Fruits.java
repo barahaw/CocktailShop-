@@ -21,6 +21,7 @@ public class Fruits extends Ingredients {
         this.color = color;
     }
 
+ 
     @Override
     public double getVolume() {
         return vloume;
@@ -40,7 +41,7 @@ public class Fruits extends Ingredients {
 
     @Override
     public String getInfo() {
-        return "Vloume: " + this.vloume + "\n" + "color: " + this.color + super.getInfo();
+        return "name:" +  super.getName() + "\n" +"calories: " + super.getCalories()  + "\n"  +  "Volume: " + this.vloume + "\n" + "color: " + this.color ;
     }
 
 }

@@ -21,14 +21,14 @@ public class Sugar extends Ingredients {
     public double getVolume() {
         return volume;
     }
-
+    
     public void setVolume(double volume) {
         this.volume = volume;
     }
 
     @Override
     public String getInfo() {
-        return "Volume: " + this.volume + "\n" + super.getInfo();
+        return "name:" +  super.getName() +  "\n" + "calories: " + super.getCalories()  + "\n"  +  "Volume: " + this.volume + "\n"  ;
     }
 
 }

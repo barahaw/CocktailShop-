@@ -1,0 +1,63 @@
+add: 
+name:banana
+calories: 120
+Volume: 100.0
+color: java.awt.Color[r=204,g=204,b=0]
+
+add: 
+name:kiwi
+calories: 140
+Volume: 100.0
+color: java.awt.Color[r=102,g=255,b=0]
+
+add: 
+name:milk
+calories: 240
+Vloume: 100.0
+color: java.awt.Color[r=255,g=255,b=255]
+
+add: 
+name:suger
+calories: 250
+Volume: 100.0
+
+
+Cup Capacity: 350.0
+add: 
+name:apple
+calories: 250
+Volume: 250.0
+color: java.awt.Color[r=255,g=0,b=0]
+
+add: 
+name:milk
+calories: 250
+Vloume: 250.0
+color: java.awt.Color[r=255,g=255,b=255]
+
+add: 
+name:suger
+calories: 250
+Volume: 250.0
+
+
+Cup Capacity: 250.0
+add: 
+name:kiwi
+calories: 120
+Volume: 120.0
+color: java.awt.Color[r=102,g=204,b=0]
+
+add: 
+name:milk
+calories: 120
+Vloume: 120.0
+color: java.awt.Color[r=255,g=255,b=255]
+
+add: 
+name:suger
+calories: 120
+Volume: 120.0
+
+
+Cup Capacity: 320.0

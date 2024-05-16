@@ -7,6 +7,7 @@ package cocktailshop;
 import java.awt.Color;
 import java.util.ArrayList;
 
+
 /**
  *
  * @author barah
@@ -17,16 +18,21 @@ public class Blender {
     private double capacity;
     private ArrayList<Ingredients> ingredients;
     private double volume;
-
+    MyLogger logger ;
+ 
     public Blender(double capacity, double volume, ArrayList<Ingredients> ingredients) {
         this.capacity = capacity;
         this.volume = volume;
         this.ingredients = ingredients;
+       
     }
 
-    public Blender(double capacity) {
+
+    
+    public Blender(double capacity,MyLogger logger) {
         this.capacity = capacity;
         this.ingredients = new ArrayList<>();
+        this.logger=logger;
     }
        
 
@@ -56,7 +62,8 @@ public class Blender {
     public void addIngredients(Ingredients ingredient) throws BlenderOverflowException {
         if (volume + ingredient.getVolume() <= capacity) {
             this.ingredients.add(ingredient);
-            volume += ingredient.getVolume(); // Update the volume of the blender
+            volume += ingredient.getVolume();            
+            logger.log("add: " + "\n" + ingredient.getInfo() + "\n");
         } else {
             throw new BlenderOverflowException();
         }
@@ -116,8 +123,10 @@ public class Blender {
 
         return blendedCocktail;
     }
-
-    public int getTotalCalories() {
+    public double getVolume(){
+        return this.volume;
+    }
+       public int getTotalCalories() {
         int totalCalories = 0;
         for (Ingredients ingredient : ingredients) {
             totalCalories += ingredient.getCalories();
@@ -125,8 +134,7 @@ public class Blender {
         }
         return totalCalories;
     }
-
-    public double getTotalVolume() {
+     public double getTotalVolume() {
         double totalValue = 0.0;
         for (Ingredients ingredient : ingredients) {
             totalValue += ingredient.getVolume();
@@ -135,44 +143,38 @@ public class Blender {
     }
 
     public void pourCocktail(Cup cup) throws BlenderIsEmptyException {
-        // Check if the blender is empty
-        if (this.volume == 0) {
+        if (this.getTotalVolume() == 0 && this.getTotalVolume() < cup.getCapacity() ) {
             throw new BlenderIsEmptyException();
         }
 
-        // Blend the cocktail first
         Cocktail blendedCocktail = blend();
 
-        // Determine if the cup can hold the entire cocktail or just a portion
-        if (cup.getCapacity() >= volume) {
-            // If cup capacity is sufficient, pour the entire cocktail
+        if (cup.getCapacity() >= getTotalVolume()) {
             cup.setContentCocktail(blendedCocktail);
-            cup.setCalories(blendedCocktail.getCalories()); // Set the calories directly
-            volume = 0; // Set blender volume to zero
-            ingredients.clear(); // Clear ingredients after pouring
+            cup.setCalories(blendedCocktail.getCalories()); 
+            volume = 0; 
+            ingredients.clear();
+            logger.log("Cup Capacity: " +cup.getCapacity());
+
         } else {
-            // Partial pouring logic
             double pouredVolume = cup.getCapacity();
-            // Calculate the calories based on the proportion of the cocktail poured using the provided equation
             int caloriesInCup = (int) ((blendedCocktail.getCalories() / blendedCocktail.getVolume()) * cup.getCapacity());
 
-            // Create a new cocktail with calculated calories and poured volume
             Cocktail partialCocktail = new Cocktail(
                     caloriesInCup,
                     pouredVolume,
                     blendedCocktail.getColor()
             );
-
-            // Set the cup's content with the new partial cocktail
+            
+            logger.log(  "Cup Capacity: " +cup.getCapacity());
             cup.setContentCocktail(partialCocktail);
-            cup.setCalories(caloriesInCup); // Set the calories for the poured volume
+            cup.setCalories(caloriesInCup); 
 
-            // Update the blender's remaining volume
             volume -= pouredVolume;
-            ingredients.clear(); // Clear ingredients after pouring
+            ingredients.clear();
         }
     }
-
+    
     public String getInfo() {
         return "Capacity: " + this.capacity + "\n" + "Ingredients: " + this.ingredients;
     }

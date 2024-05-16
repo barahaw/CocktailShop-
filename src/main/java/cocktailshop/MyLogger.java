@@ -5,17 +5,31 @@
  */
 package cocktailshop;
 
+import java.io.FileWriter;
+import java.io.IOException;
+
 /**
  *
  * @author barah
  */
   public class MyLogger implements Logger{
+   private String filePath;
 
-    @Override
-    public void log(String msg) {
-        System.out.println(msg);
+    public MyLogger(String filePath) {
+        this.filePath = filePath;
     }
-    
+   
+    @Override
+   public void log(String msg) {
+       try {
+           FileWriter fw=new FileWriter(this.filePath,true);
+          
+           fw.write(msg + "\n");
+           fw.close();
+       } catch (IOException ex) {
+           System.out.println(ex.getMessage());
+       }
+   }
     
 }
 

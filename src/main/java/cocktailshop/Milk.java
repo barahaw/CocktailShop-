@@ -39,7 +39,7 @@ public class Milk extends Ingredients {
 
     @Override
     public String getInfo() {
-        return "Vloume: " + this.vloume + "\n" + "color: " + this.color + "\n" + super.getInfo();
+        return "name:" +  super.getName() + "\n" +"calories: " + super.getCalories()  + "\n"  +  "Vloume: " + this.vloume + "\n" + "color: " + this.color ;
     }
 
 }

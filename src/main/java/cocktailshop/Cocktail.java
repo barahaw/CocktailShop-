@@ -52,8 +52,8 @@ public class Cocktail {
 
     public String getInfo() {
         return "Cocktail info: " + "\n"
-                + "Calories: " + this.calories + "\n"
-                + "Volume: " + this.volume + "ml\n"
-                + "Color: " + this.color.toString();
+                + "Calories: " + this.calories + ".cal" + "\n"
+                + "Volume: " + this.volume + "ml\n";
+               
     }
 }
