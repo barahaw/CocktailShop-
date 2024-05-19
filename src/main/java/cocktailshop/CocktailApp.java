@@ -22,8 +22,8 @@ import javax.swing.JOptionPane;
  * @author barah
  */
 public class CocktailApp extends javax.swing.JFrame {
-    Color color;
-    MyLogger logger=new MyLogger("loger.log");
+     Color color;
+     MyLogger logger=new MyLogger("loger.log");
       Blender blender = new Blender(1000, logger);
       Cocktail cocktail = new Cocktail();
       Cup cup = new Cup();
@@ -900,7 +900,7 @@ private boolean settingIconProgrammatically = false;
 
     private void FruitsLabelPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_FruitsLabelPropertyChange
         // TODO add your handling code here:
-String path = "src/main/java/image/Fruits-removebg-preview.png";
+   String path = "src/main/java/image/Fruits-removebg-preview.png";
         if (!settingIconProgrammatically) {
         settingIconProgrammatically = true;
         FruitsLabel.setIcon(new ImageIcon(path));
@@ -969,7 +969,11 @@ VolTextField.setText("");
     String name = NameMilkTextField.getText();
     double volume = Double.parseDouble(VolMilkTextField.getText());
     int calories = Integer.parseInt(CalMilkTextField.getText());
-    Milk milk = new Milk(name, calories, volume, Color.WHITE);
+     color = JColorChooser.showDialog(this, "Select Color, ", color);
+    if (color == null) {
+        color = Color.WHITE;
+    }
+    Milk milk = new Milk(name, calories, volume,  color);
     ingredientses.add(milk);
     blender.addIngredients(milk);
     click();

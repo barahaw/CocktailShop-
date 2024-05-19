@@ -61,3 +61,141 @@ Volume: 120.0
 
 
 Cup Capacity: 320.0
+add: 
+name:apple
+calories: 52
+Volume: 150.0
+color: java.awt.Color[r=255,g=0,b=0]
+
+add: 
+name:milk
+calories: 52
+Vloume: 140.0
+color: java.awt.Color[r=255,g=255,b=255]
+
+Cup Capacity: 150.0
+add: 
+name:k
+calories: 41
+Volume: 40.0
+color: java.awt.Color[r=102,g=0,b=0]
+
+add: 
+name:0
+calories: 0
+Volume: 0.0
+color: java.awt.Color[r=255,g=255,b=255]
+
+add: 
+name:test
+calories: 120
+Volume: 100.0
+color: java.awt.Color[r=255,g=51,b=0]
+
+Cup Capacity: 100.0
+add: 
+name:ss
+calories: 45
+Vloume: 6.0
+color: java.awt.Color[r=255,g=255,b=255]
+
+add: 
+name:a
+calories: 120
+Volume: 200.0
+color: java.awt.Color[r=255,g=0,b=51]
+
+add: 
+name:ss
+calories: 44
+Vloume: 51.0
+color: javax.swing.plaf.ColorUIResource[r=255,g=255,b=255]
+
+add: 
+name:ss
+calories: 55
+Volume: 100.0
+
+
+Cup Capacity: 150.0
+add: 
+name:a
+calories: 100
+Volume: 100.0
+color: java.awt.Color[r=0,g=0,b=0]
+
+add: 
+name:aa
+calories: 100
+Vloume: 100.0
+color: javax.swing.plaf.ColorUIResource[r=255,g=255,b=255]
+
+add: 
+name:aaa
+calories: 100
+Volume: 50.0
+
+
+Cup Capacity: 500.0
+add: 
+name:ts
+calories: 100
+Volume: 100.0
+color: java.awt.Color[r=0,g=0,b=0]
+
+add: 
+name:ss
+calories: 100
+Vloume: 100.0
+color: javax.swing.plaf.ColorUIResource[r=255,g=255,b=255]
+
+add: 
+name:ssa
+calories: 100
+Volume: 50.0
+
+
+Cup Capacity: 250.0
+add: 
+name:sz
+calories: 100
+Volume: 100.0
+
+
+add: 
+name:w
+calories: 150
+Vloume: 150.0
+color: javax.swing.plaf.ColorUIResource[r=255,g=255,b=255]
+
+add: 
+name:scs
+calories: 100
+Volume: 100.0
+color: java.awt.Color[r=102,g=102,b=0]
+
+add: 
+name:ad
+calories: 100
+Volume: 100.0
+color: java.awt.Color[r=0,g=51,b=153]
+
+add: 
+name:dx
+calories: 100
+Vloume: 100.0
+color: java.awt.Color[r=255,g=0,b=102]
+
+add: 
+name:dx
+calories: 100
+Volume: 100.0
+
+
+add: 
+name:WC
+calories: 100
+Volume: 100.0
+color: java.awt.Color[r=204,g=204,b=204]
+
+Cup Capacity: 500.0

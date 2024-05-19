@@ -19,16 +19,7 @@ public class Blender {
     private ArrayList<Ingredients> ingredients;
     private double volume;
     MyLogger logger ;
- 
-    public Blender(double capacity, double volume, ArrayList<Ingredients> ingredients) {
-        this.capacity = capacity;
-        this.volume = volume;
-        this.ingredients = ingredients;
-       
-    }
-
-
-    
+   
     public Blender(double capacity,MyLogger logger) {
         this.capacity = capacity;
         this.ingredients = new ArrayList<>();
@@ -143,7 +134,7 @@ public class Blender {
     }
 
     public void pourCocktail(Cup cup) throws BlenderIsEmptyException {
-        if (this.getTotalVolume() == 0 && this.getTotalVolume() < cup.getCapacity() ) {
+        if (this.getTotalVolume() == 0) {
             throw new BlenderIsEmptyException();
         }
 
